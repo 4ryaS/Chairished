@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Rentals - India</title>
+    <link rel="stylesheet" href="stylesheets/style1.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/c1bd0c071c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <img src="images/DALL·E 2024-06-29 19.16.14 - A circular logo for a furniture rental company named 'FurniHaven'. The logo should feature a modern and minimalist design, incorporating elements like.webp" class="logo" alt="image">
+                <div class="search-container">
+                    <input type="text" placeholder="Search for products" class="search-input">
+                    <button class="search-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21L15 15M17 10C17 14.4183 13.4183 18 9 18C4.58172 18 1 14.4183 1 10C1 5.58172 4.58172 2 9 2C13.4183 2 17 5.58172 17 10Z" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <ul id="sidemenu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li>
+                        <button class="btn">
+                            <a href="/login">Sign In</a>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn" onclick="viewCart()">
+                            <a href="#">Cart (<span id="cart-count">0</span>)</a>
+                        </button>
+                    </li>
+                    <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <div class="profile">
+                    <a href="/profile"><i class="fa-regular fa-user"></i></a>
+                </div>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- Hero Banner -->
+<div class="hero-banner">
+    <div class="hero-text">
+        <h1>Transform Your Space with <span>FurniHaven</span></h1>
+        <p>Your go-to furniture rental service in India.</p>
+        <a href="/products" class="btn btn-primary">Explore Now</a>
+    </div>
+</div>
+
+<!-- Company Values -->
+<div class="company-values container">
+    <h2>Our Values</h2>
+    <div class="values-content">
+        <div class="value-item">
+            <i class="fa-solid fa-leaf"></i>
+            <h3>Eco-Friendly</h3>
+            <p>We prioritize sustainability by offering eco-friendly furniture options.</p>
+        </div>
+        <div class="value-item">
+            <i class="fa-solid fa-thumbs-up"></i>
+            <h3>Quality Assurance</h3>
+            <p>All our products are quality checked to ensure you get the best experience.</p>
+        </div>
+        <div class="value-item">
+            <i class="fa-solid fa-handshake"></i>
+            <h3>Customer Focus</h3>
+            <p>Our customers are our top priority, and we strive to meet your needs.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Rent Now Section -->
+<div class="rent-now container">
+    <h2>Rent Now</h2>
+    <p>Choose from a wide range of premium furniture to suit your home or office.</p>
+    <a href="/products" class="btn btn-success">Rent Now</a>
+</div>
+
+<!-- Product Management -->
+<div id="products" class="container my-5">
+    <h2 class="text-center mb-4">Our Products</h2><br>
+    <div class="product-menu row">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/two-seat-sofa.png" class="card-img-top" alt="Two Seater Sofa">
+                <div class="card-body"><br>
+                    <h2 class="card-title">Two Seater Sofa</h2><br>
+                    <p class="card-text">Rent: ₹350/day</p>
+                    <p class="card-text">Nos. Avl: 3</p>
+                    <button class="btn btn-warning" onclick="addToCart('Two Seater Sofa', 350)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/four-seater-sofa.png" class="card-img-top" alt="Four Seater Sofa">
+                <div class="card-body"><br>
+                    <h2 class="card-title">Four Seater Sofa</h2><br>
+                    <p class="card-text">Rent: ₹500/day</p>
+                    <p class="card-text">Nos. Avl: 1</p>
+                    <button class="btn btn-warning" onclick="addToCart('Four Seater Sofa', 500)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/comfortable double bed with cousions ,comforter and soft mattress (2).png" class="card-img-top" alt="Double Bed (King)">
+                <div class="card-body"><br>
+                    <h2 class="card-title">Double Bed (King)</h2><br>
+                    <p class="card-text">Rent: ₹750/day</p>
+                    <p class="card-text">Nos. Avl: 2</p>
+                    <button class="btn btn-warning" onclick="addToCart('Double Bed (King)', 750)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/comfortable%20double%20bed%20with%20cousions%20,comforter%20and%20soft%20mattress%20(2).png" class="card-img-top" alt="Double Bed (Queen)">
+                <div class="card-body"><br>
+                    <h2 class="card-title">Double Bed (Queen)</h2><br>
+                    <p class="card-text">Rent: ₹600/day</p>
+                    <p class="card-text">Nos. Avl: 2</p>
+                    <button class="btn btn-warning" onclick="addToCart('Double Bed (Queen)', 600)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/chair with footrest table.png" class="card-img-top" alt="Chair & Footrest Pair">
+                <div class="card-body"><br>
+                    <h2 class="card-title">Chair & Footrest Pair</h2><br>
+                    <p class="card-text">Rent: ₹200/day</p>
+                    <p class="card-text">Nos. Avl: 5</p>
+                    <button class="btn btn-warning" onclick="addToCart('Chair & Footrest Pair', 200)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/dinningtable.png" class="card-img-top" alt="4 Seater Dining Table">
+                <div class="card-body"><br>
+                    <h2 class="card-title">4 Seater Dining Table</h2><br>
+                    <p class="card-text">Rent: ₹400/day</p>
+                    <p class="card-text">Nos. Avl: 3</p>
+                    <button class="btn btn-warning" onclick="addToCart('4 Seater Dining Table', 400)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Counter Section -->
+<div class="counters container">
+    <div class="counter-item">
+        <h2><span class="count" data-target="1500">0</span>+</h2>
+        <p>Happy Users</p>
+    </div>
+    <div class="counter-item">
+        <h2><span class="count" data-target="500">0</span>+</h2>
+        <p>Active Renters</p>
+    </div>
+    <div class="counter-item">
+        <h2><span class="count" data-target="100">0</span>+</h2>
+        <p>Cities of Delivery</p>
+    </div>
+</div>
+<div class="copyright">
+    <p>Copyright © FurniHaven. Made with <i class="fa-solid fa-heart"></i> by APRY Co.</p>
+</div>
+
+<hr> 
+
+<!-- Cart Section -->
+<div id="cart-modal" style="display: none;">
+    <div class="cart-content">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <button class="btn btn-danger" onclick="clearCart()">Clear Cart</button>
+        <button class="btn btn-success" onclick="checkout()">Checkout</button>
+        <button class="btn btn-secondary" onclick="closeCart()">Close</button>
+    </div>
+</div>
+
+
+
+
+<script>
+   // Counter Animation
+function animateCounters() {
+    const counters = document.querySelectorAll('.count');
+    counters.forEach(counter => {
+        counter.innerText = '0';
+        const updateCounter = () => {
+            const target = +counter.getAttribute('data-target');
+            const current = +counter.innerText;
+            const increment = target / 200;
+
+            if (current < target) {
+                counter.innerText = Math.ceil(current + increment);
+                setTimeout(updateCounter, 30);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCounter();
+    });
+}
+
+document.addEventListener('DOMContentLoaded', animateCounters);
+
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+    // Cart functionality
+    var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function addToCart(product, price) {
+        var item = cart.find(item => item.product === product);
+        if (item) {
+            item.quantity++;
+        } else {
+            cart.push({ product, price, quantity: 1 });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        alert(product + ' added to cart');
+    }
+
+    function updateCartCount() {
+        var cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+        document.getElementById('cart-count').innerText = cartCount;
+    }
+
+    function viewCart() {
+        var cartModal = document.getElementById('cart-modal');
+        var cartItems = document.getElementById('cart-items');
+        cartItems.innerHTML = '';
+        cart.forEach(item => {
+            var li = document.createElement('li');
+            li.innerText = `${item.product} - ₹${item.price} x ${item.quantity}`;
+            cartItems.appendChild(li);
+        });
+        cartModal.style.display = 'block';
+    }
+
+    function clearCart() {
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        viewCart();
+    }
+
+    function closeCart() {
+        document.getElementById('cart-modal').style.display = 'none';
+    }
+
+    function checkout() {
+        if (cart.length === 0) {
+            alert('Your cart is empty!');
+            return;
+        }
+
+        var totalAmount = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+        alert('Your total amount is ₹' + totalAmount + '. Thank you for your purchase!');
+
+        // Clear the cart after checkout
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        closeCart();
+
+        // Redirect to checkout page
+        window.location.href = 'checkout.html';
+    }
+
+    // Initialize cart count on page load
+    document.addEventListener('DOMContentLoaded', updateCartCount);
+</script>
+
+<style>
+    .logo {
+    width: 120px; /* Adjust size as needed */
+    height: 120px; /* Adjust size as needed */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+    /* Hero Banner Styles */
+    /* Counter Styles */
+.counters {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.counter-item {
+    flex: 1;
+    padding: 20px;
+}
+
+.counter-item h2 {
+    font-size: 2.5em;
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+.counter-item p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+    .hero-banner {
+        background-image: url('hero-banner.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+        color: white;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    .hero-text p {
+        font-size: 1.5em;
+    }
+
+    .hero-text .btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #ff6f61;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .hero-text .btn:hover {
+        background-color: #ff3b2e;
+    }
+
+    /* Company Values Styles */
+    .company-values {
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .values-content {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .value-item {
+        flex: 1;
+        padding: 20px;
+        max-width: 300px;
+    }
+
+    .value-item i {
+        font-size: 2em;
+        color: #ff6f61;
+    }
+
+    .value-item h3 {
+        margin-top: 10px;
+    }
+
+    /* Rent Now Section Styles */
+    .rent-now {
+        padding: 50px 0;
+        text-align: center;
+        background-color: #f8f8f8;
+    }
+
+    .rent-now h2 {
+        margin-bottom: 20px;
+    }
+
+    .rent-now p {
+        margin-bottom: 20px;
+    }
+
+    .rent-now .btn {
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .rent-now .btn:hover {
+        background-color: #218838;
+    }
+
+    /* Cart Modal Styles */
+    #cart-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cart-content {
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        width: 80%;
+        max-width: 600px;
+    }
+</style>
+
+</body>
+</html>

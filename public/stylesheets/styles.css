@@ -1,0 +1,139 @@
+.playwrite-es-deco {
+  font-family: "Playwrite ES Deco", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+    font-family: Arial,sans-serif   ;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+ 
+
+.headingsx{
+    font-family: "Playwrite ES Deco",Arial,sans-serif   ;
+}
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.login-section {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.logo-container {
+    margin-bottom: 1.5rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333333;
+}
+
+p {
+    color: #777777;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    width: 300px;
+ 
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555555;
+}
+
+input {
+    width:100%;
+    
+    padding: 0.75rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.options1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* align items to the center */
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me label {
+    margin-left: 0rem; /* add some space between the checkbox and the label */
+    font-size: 14px;
+}
+
+
+
+button.login-button {
+    background-color: #03749d;
+    color: #ffffff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.login-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.illustration-section {
+    flex: 2;
+    background-color: #f0f2f5;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.illustration {
+    width: 100%;
+    max-width: auto;
+    height:  600px;
+}

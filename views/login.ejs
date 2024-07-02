@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="stylesheets/login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      <form id="loginForm" method="post" action="/login">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <input type="submit" value="login">
+        <div class="links">
+          <a href="#">Forgot password?</a>
+          <a href="#">Create account?</a>
+        </div>
+      </form>
+    </div>
+    <!-- <script>
+      document.getElementById("loginForm").addEventListener("submit", function (event) {
+          event.preventDefault();
+          // Add your login logic here
+          alert("Login form submitted");
+        });
+    </script> -->
+  </body>
+</html>

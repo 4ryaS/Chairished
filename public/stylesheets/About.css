@@ -1,0 +1,100 @@
+/* about.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.about-container:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.about-container h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  color: #ff004f;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.about-container h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #34495e;
+  font-weight: 600;
+  border-bottom: 2px solid #e67e22;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.about-container p {
+  font-size: 1em;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.about-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-container ul li {
+  font-size: 1em;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.about-container ul li::before {
+  content: '\2713';
+  color: #e67e22;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.5em;
+}
+
+.about-container ul li strong {
+  color: #2980b9;
+  transition: color 0.3s ease-in-out;
+}
+
+.about-container ul li strong:hover {
+  color: #e67e22;
+}
+
+@media (max-width: 600px) {
+  .about-container {
+      margin: 20px;
+      padding: 15px;
+  }
+
+  .about-container h1 {
+      font-size: 2em;
+  }
+
+  .about-container h2 {
+      font-size: 1.5em;
+  }
+
+  .about-container p, .about-container ul li {
+      font-size: 0.9em;
+  }
+}
