@@ -1,4 +1,4 @@
-# Welcome to Chairished (COMING SOON)!
+# Welcome to Chairished!
 
 ## What's New?
 
